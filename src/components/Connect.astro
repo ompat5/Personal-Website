@@ -30,7 +30,9 @@ const brandIcons = ["linkedin", "github"];
           {
             links.map((link) => (
               <a
-                class="flex items-center justify-between bg-primary text-on-primary p-6 rounded-xl hover:scale-[1.02] transition-transform group"
+                class={`flex items-center justify-between ${
+                  link.label === "Resume" ? "bg-accent" : "bg-primary"
+                } text-on-primary p-6 rounded-xl hover:scale-[1.02] transition-transform group`}
                 href={link.href}
                 target={link.label === "Resume" ? "_blank" : undefined}
                 rel={link.label === "Resume" ? "noopener noreferrer" : undefined}
