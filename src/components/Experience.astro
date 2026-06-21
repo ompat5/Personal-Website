@@ -1,41 +1,66 @@
 ---
 const companies = [
   {
-    name: "Stitch AI",
+    name: "Synopsys",
     roles: [
       {
-        title: "Senior Frontend Engineer",
-        date: "Jan 2024 — Present",
-        description:
-          "Architecting scalable UI systems and leading the development of collaborative design tools.",
-      },
-      {
-        title: "Frontend Engineer",
-        date: "Jan 2023 — Dec 2023",
-        description:
-          "Built core component libraries and optimized performance for the primary design editor.",
+        title: "Data Scientist Intern",
+        date: "May 2025 — Dec 2025",
+        points: [
+          "Designed and implemented a full-stack data transformation engine using Qt, featuring a custom Lark mathematical parser to evaluate user-defined functions on tabular data.",
+          "Enabled in-platform data manipulation capabilities for statistical modeling and reduced analysis time by 20% by eliminating data import/export workflows.",
+          "Integrated predictive modeling features using scikit-learn to implement ML algorithms including Logistic Regression, GLMs and K-Means clustering.",
+          "Streamlined the experiment-analysis-reporting workflow by providing in-platform statistical modeling and data preprocessing, removing reliance on external tools.",
+        ],
       },
     ],
   },
   {
-    name: "Quantum Labs",
+    name: "Ontario Ministry of Education",
     roles: [
       {
-        title: "Product Engineer",
-        date: "June 2021 — Dec 2022",
-        description:
-          "Developed high-performance dashboard interfaces and optimized core rendering pipelines.",
+        title: "Data Scientist Intern",
+        date: "Sept 2024 — Dec 2024",
+        points: [
+          "Supported future policy analysis by implementing schema changes on normalized relational and star schema dimensional databases, using dbt for impact analysis, backward compatibility checks, and data integrity validation.",
+          "Decreased data preprocessing time from 1 hour to 5 seconds (99.86% faster) by building an automated Pandas pipeline for 300K+ urban planning entries, eliminating the client's manual workflow and enabling future housing market modeling.",
+          "Led technical discussions with external clients to define preprocessing requirements for urban planning data files.",
+        ],
       },
     ],
   },
   {
-    name: "Nebula Studio",
+    name: "Darwin CX",
     roles: [
       {
-        title: "Software Engineer",
-        date: "Aug 2019 — May 2021",
-        description:
-          "Focused on minimalist web architectures and fluid motion design for client portfolios.",
+        title: "Data Scientist Intern",
+        date: "Sept 2023 — Apr 2024",
+        points: [
+          "Improved forecasting accuracy by 30% by implementing a K-Means clustering model to segment sales data and account for seasonal fluctuations in purchasing behaviour.",
+          "Reduced Looker report loading time by 98% by establishing persistent derived tables that precompute large joins and aggregations.",
+          "Decreased Analytics Division operations costs by 10% by optimizing Snowflake compute resources and refactoring SQL queries.",
+          "Built Medallion architecture data pipelines using dbt for silver/gold layer transformations, data validation, and job orchestration.",
+        ],
+      },
+      {
+        title: "Data Analyst Intern",
+        date: "Apr 2023 — Sept 2023",
+        points: [
+          "Developed 20+ Looker reports to transform raw data into actionable insights for client-specific requirements.",
+          "Reduced audit resolution time by 50% by creating SQL queries for faster data integrity verification.",
+        ],
+      },
+    ],
+  },
+  {
+    name: "Ontario Ministry of Transportation",
+    roles: [
+      {
+        title: "Data Analyst Intern",
+        date: "Sept 2022 — Dec 2022",
+        points: [
+          "Created 10 dynamic Power BI reports on IT application usage to improve organizational business decisions.",
+        ],
       },
     ],
   },
@@ -70,9 +95,11 @@ const companies = [
                       {role.date}
                     </span>
                   </div>
-                  <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                    {role.description}
-                  </p>
+                  <ul class="list-disc pl-5 space-y-2 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    {role.points.map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

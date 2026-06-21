@@ -1,9 +1,9 @@
 ---
 const links = [
-  { label: "LinkedIn", href: "#", icon: "linkedin" },
-  { label: "GitHub", href: "#", icon: "github" },
-  { label: "Email", href: "mailto:hello@majd.com", icon: "mail" },
-  { label: "Resume", href: "#", icon: "description" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/omrpatel/", icon: "linkedin" },
+  { label: "GitHub", href: "https://github.com/ompat5", icon: "github" },
+  { label: "Email", href: "mailto:omrpatel@outlook.com", icon: "mail" },
+  { label: "Resume", href: "/resume.pdf", icon: "description" },
 ];
 
 // Brand glyphs (Material Symbols has no brand logos) vs. Material Symbols.
@@ -21,7 +21,7 @@ const brandIcons = ["linkedin", "github"];
         <p
           class="font-ui-text text-body-md leading-relaxed text-on-surface-variant mt-4 max-w-sm"
         >
-          Currently open to new engineering challenges, collaborative
+          Currently open to new data challenges, collaborative
           open-source projects
         </p>
       </div>
@@ -32,6 +32,8 @@ const brandIcons = ["linkedin", "github"];
               <a
                 class="flex items-center justify-between bg-primary text-on-primary p-6 rounded-xl hover:scale-[1.02] transition-transform group"
                 href={link.href}
+                target={link.label === "Resume" ? "_blank" : undefined}
+                rel={link.label === "Resume" ? "noopener noreferrer" : undefined}
               >
                 <div class="flex items-center gap-4">
                   {link.icon === "linkedin" ? (
