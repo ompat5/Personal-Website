@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sagarp.ca/sitemap-index.xml
+Sitemap: https://omrpatel.ca/sitemap-index.xml

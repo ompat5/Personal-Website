@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "omrpatel-site",
+  "compatibility_date": "2025-06-21",
+  // Serve the static site built by `npm run build` (outputs to ./dist)
+  "assets": {
+    "directory": "./dist"
+  }
+}
