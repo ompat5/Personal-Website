@@ -3,7 +3,7 @@ title: "Heart Disease Prediction Model"
 subtitle: "Reading the warning signs before they're symptoms."
 date: 2023-01-08
 type: project
-image: "/heart-disease-prediction.png"
+image: "/projects/heart-disease-prediction.png"
 repo: "https://github.com/ompat5/Heart-Disease-Prediction-Model"
 featured: false
 ---

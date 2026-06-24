@@ -9,8 +9,9 @@ const { post } = Astro.props;
 const { title, subtitle, date, image } = post.data;
 
 // Cards always link to the internal write-up page; the `repo` URL surfaces as
-// a styled button on that page rather than redirecting the card.
-const href = `/blog/${post.id}`;
+// a styled button on that page rather than redirecting the card. The id carries
+// a folder prefix (projects/…), so use just the final segment for a clean URL.
+const href = `/blog/${post.id.split("/").pop()}`;
 
 const dateLabel = date?.toLocaleDateString("en-US", {
   year: "numeric",

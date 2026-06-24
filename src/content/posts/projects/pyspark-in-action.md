@@ -3,7 +3,7 @@ title: "PySpark in Action"
 subtitle: "Seven ways to make a cluster do the heavy lifting."
 date: 2026-06-08
 type: project
-image: "/pyspark-in-action.png"
+image: "/projects/pyspark-in-action.png"
 repo: "https://github.com/ompat5/pyspark-in-action"
 featured: false
 ---

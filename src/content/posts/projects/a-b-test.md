@@ -3,7 +3,7 @@ title: "Gate-Keeping"
 subtitle: "Does making players wait make them stay?"
 date: 2026-06-10
 type: project
-image: "/a-b-test.png"
+image: "/projects/a-b-test.png"
 repo: "https://github.com/ompat5/A-B-Testing-Analysis"
 featured: true
 ---
