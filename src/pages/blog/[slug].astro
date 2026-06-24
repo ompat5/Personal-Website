@@ -3,24 +3,22 @@ import { getCollection, render } from "astro:content";
 import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-// Only entries without a `repo` get an internal page — repo entries link out,
-// so generating a page for them would create dead routes.
+// Every published entry gets an internal write-up page. A `repo` URL, when
+// present, renders as a styled "View on GitHub" link at the end of the page.
 export const getStaticPaths = (async () => {
-  const posts = await getCollection(
-    "posts",
-    (e) => !e.data.repo && !e.data.draft,
-  );
+  const posts = await getCollection("posts", (e) => !e.data.draft);
   return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
 }) satisfies GetStaticPaths;
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const { title, subtitle, date, image } = post.data;
+const { title, subtitle, date, image, repo } = post.data;
 
 const dateLabel = date?.toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
+  timeZone: "UTC",
 });
 ---
 
@@ -72,5 +70,25 @@ const dateLabel = date?.toLocaleDateString("en-US", {
     <div class="post-body max-w-3xl mx-auto">
       <Content />
     </div>
+
+    {
+      repo && (
+        <div class="max-w-3xl mx-auto mt-12">
+          <a
+            class="inline-flex items-center gap-2 font-ui-text text-[16px] font-bold group"
+            href={repo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="border-b-2 border-transparent group-hover:border-on-background">
+              View on GitHub
+            </span>
+            <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">
+              north_east
+            </span>
+          </a>
+        </div>
+      )
+    }
   </article>
 </BaseLayout>

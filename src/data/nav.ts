@@ -1,5 +1,5 @@
 // Single source of truth for site navigation links.
-// Nav uses navLinks; Footer appends its own extras (e.g. Blog).
+// Both Nav and Footer use navLinks.
 export interface NavLink {
   label: string;
   href: string;

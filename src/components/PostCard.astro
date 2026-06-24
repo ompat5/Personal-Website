@@ -6,23 +6,22 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, subtitle, date, image, repo } = post.data;
+const { title, subtitle, date, image } = post.data;
 
-// A repo entry links out to GitHub; otherwise to the internal write-up page.
-const href = repo ?? `/blog/${post.id}`;
-const external = Boolean(repo);
+// Cards always link to the internal write-up page; the `repo` URL surfaces as
+// a styled button on that page rather than redirecting the card.
+const href = `/blog/${post.id}`;
 
 const dateLabel = date?.toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
+  timeZone: "UTC",
 });
 ---
 
 <a
   href={href}
-  target={external ? "_blank" : undefined}
-  rel={external ? "noopener noreferrer" : undefined}
   class="relative aspect-video rounded-xl overflow-hidden group block"
 >
   {
