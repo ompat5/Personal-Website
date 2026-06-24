@@ -11,12 +11,14 @@ const byDate = (a: typeof published[number], b: typeof published[number]) =>
   (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0);
 
 const projects = published.filter((e) => e.data.type === "project").sort(byDate);
-const writing = published.filter((e) => e.data.type === "blog").sort(byDate);
+// Re-enable alongside the Writing section below to list blog posts.
+// const writing = published.filter((e) => e.data.type === "blog").sort(byDate);
 
 // Blog-page nav: anchors to the on-page sections, plus Connect on the homepage.
+// The "Blogs" link is disabled until the Writing section is re-enabled below.
 const navLinks: NavLink[] = [
   { label: "Projects", href: "#projects" },
-  { label: "Blogs", href: "#blogs" },
+  // { label: "Blogs", href: "#blogs" },
   { label: "Connect", href: "/#contact" },
 ];
 ---
@@ -30,7 +32,7 @@ const navLinks: NavLink[] = [
       <div class="mb-16">
         <h1 class="font-headline-lg text-headline-lg">Projects</h1>
         <p class="font-body-md text-body-md opacity-70 mt-4 max-w-xl">
-          Selected engineering and design work, most recent first.
+          Selected work across data science, ML, and software. Most recent first.
         </p>
       </div>
 
@@ -50,6 +52,8 @@ const navLinks: NavLink[] = [
     </div>
   </section>
 
+  {/* Writing section — disabled for now. Re-enable this block (and the
+      "Blogs" nav link above) to surface blog posts (type: "blog").
   <section
     id="blogs"
     class="px-margin-mobile md:px-margin-page py-section-gap border-t border-outline-variant"
@@ -77,4 +81,5 @@ const navLinks: NavLink[] = [
       }
     </div>
   </section>
+  */}
 </BaseLayout>
