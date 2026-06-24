@@ -7,7 +7,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 // present, renders as a styled "View on GitHub" link at the end of the page.
 export const getStaticPaths = (async () => {
   const posts = await getCollection("posts", (e) => !e.data.draft);
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  // Posts live in subfolders (posts/projects/…, later posts/blog/…), so the
+  // collection id carries that prefix. Strip it to keep clean /blog/<name> URLs.
+  return posts.map((post) => ({
+    params: { slug: post.id.split("/").pop()! },
+    props: { post },
+  }));
 }) satisfies GetStaticPaths;
 
 const { post } = Astro.props;

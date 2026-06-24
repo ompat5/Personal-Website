@@ -3,7 +3,7 @@ title: "Uber Data Visualization"
 subtitle: "Six months of New York, one chart at a time."
 date: 2023-01-08
 type: project
-image: "/uber-data-visualization.png"
+image: "/projects/uber-data-visualization.png"
 repo: "https://github.com/ompat5/Uber-Data-Visualization"
 featured: false
 ---

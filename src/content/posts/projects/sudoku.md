@@ -3,7 +3,7 @@ title: "Sudoku Solver"
 subtitle: "Because life's too short to stare at a 9×9 grid."
 date: 2023-03-31
 type: project
-image: "/sudoku.png"
+image: "/projects/sudoku.png"
 repo: "https://github.com/ompat5/Sudoku-Solver"
 featured: false
 ---

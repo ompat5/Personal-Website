@@ -3,7 +3,7 @@ title: "Sign Language Detection"
 subtitle: "Teaching a webcam to read your hands."
 date: 2024-09-17
 type: project
-image: "/sign-language-detection.png"
+image: "/projects/sign-language-detection.png"
 repo: "https://github.com/ompat5/Sign-Language-Detection"
 featured: true
 ---

@@ -3,7 +3,7 @@ title: "Watopoly"
 subtitle: "Monopoly, but the rent is tuition."
 date: 2024-04-04
 type: project
-image: "/watopoly.png"
+image: "/projects/watopoly.png"
 repo: "https://github.com/ompat5/Watopoly"
 featured: false
 ---

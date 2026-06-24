@@ -3,7 +3,7 @@ title: "Minesweeper AI Bot"
 subtitle: "It clicks so you don't have to."
 date: 2024-09-20
 type: project
-image: "/minesweeper-ai-bot.png"
+image: "/projects/minesweeper-ai-bot.png"
 repo: "https://github.com/ompat5/MineSweeper-AI-Bot"
 featured: true
 ---

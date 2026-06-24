@@ -3,7 +3,7 @@ title: "Correlation Isn't Enough"
 subtitle: "Measuring an ad campaign you couldn't A/B test."
 date: 2026-06-18
 type: project
-image: "/causal-inference.png"
+image: "/projects/causal-inference.png"
 repo: "https://github.com/ompat5/Causal-Inference-Project"
 featured: true
 ---

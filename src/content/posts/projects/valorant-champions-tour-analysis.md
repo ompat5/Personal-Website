@@ -3,7 +3,7 @@ title: "Valorant Champions Tour Analysis"
 subtitle: "Proof that the kill feed isn't the whole story."
 date: 2026-06-09
 type: project
-image: "/valorant-champions-tour-analysis.png"
+image: "/projects/valorant-champions-tour-analysis.png"
 repo: "https://github.com/ompat5/valorant-champions-tour-analysis"
 featured: false
 ---
