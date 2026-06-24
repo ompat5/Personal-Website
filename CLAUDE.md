@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website for Sagar Patel. Built with **Astro** (static site generator) and styled with **Tailwind CSS v4** (via the `@tailwindcss/vite` plugin — no `tailwind.config.js`). Requires Node >= 22.12.0.
+Personal portfolio website for Om Patel. Built with **Astro** (static site generator) and styled with **Tailwind CSS v4** (via the `@tailwindcss/vite` plugin — no `tailwind.config.js`). Requires Node >= 22.12.0.
 
 ## Commands
 
